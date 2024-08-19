@@ -5,76 +5,76 @@
   --color-naranja: #eca869;
   --color-blanco-muy-claro: #f5f5f5;
   --color-rojo-claro: #b08bbb;
-  --color-azul-oscuro: rgba(
-    29,
-    29,
-    218,
-    0.5
-  ); /* Color con opacidad para el fondo */
+  --color-azul-oscuro: rgba(29, 29, 218, 0.5);
   --color-borde-campo: #b0b8bb;
+  --color-verde: #4caf50;
+  --color-verde-claro: #81c784;
 }
 
 /* Estilos generales */
 body {
   margin: 0;
   font-family: "Arial", sans-serif;
-  background-color: var(
-    --color-blanco-muy-claro
-  ); /* Color de fondo del cuerpo de la página */
+  background-color: var(--color-blanco-muy-claro);
 }
 
 .container {
   display: flex;
-  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+  height: 100vh;
 }
 
 .left-side {
   flex: 1;
-  background-image: url("images/DraSentada.JPG"); /* Imagen de fondo */
+  background-image: url("images/DraSentada.JPG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #fff; /* Color del texto */
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  background-color: var(
-    --color-azul-oscuro
-  ); /* Color con opacidad para que se vea la imagen de fondo */
+  background-color: var(--color-azul-oscuro);
 }
 
 .left-side .odontos {
-  width: 30%;
-  margin-top: 0;
+  width: 40%;
+  margin-bottom: 20px;
 }
 
-.left-side h2 {
-  margin: 0;
-  font-size: 32px;
-  color: var(--color-blanco-muy-claro); /* Blanco muy claro para el texto */
-}
-
-.left-side p {
-  font-size: 18px;
+/* Estilos para el contenedor del texto */
+.left-content {
   text-align: center;
-  color: var(--color-blanco-muy-claro); /* Blanco muy claro para el texto */
+  background: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de opacidad */
+  padding: 20px;
+  border-radius: 8px; /* Opcional: bordes redondeados */
+}
+
+.left-content h2 {
+  font-size: 36px;
+  color: #ffffff; /* Blanco puro para mejor contraste */
+  margin: 0;
+}
+
+.left-content p {
+  font-size: 20px;
+  color: #ffffff; /* Blanco puro para mejor contraste */
+  margin: 10px 0 0;
 }
 
 /* Lado derecho de la página */
-
 .right-side {
   flex: 1;
-  background-color: #ffffff; /* Blanco para el fondo del formulario */
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  border-left: 2px solid var(--color-gris-pálido); /* Línea divisoria gris pálido */
+  border-left: 2px solid var(--color-gris-pálido);
 }
 
 header {
@@ -82,60 +82,60 @@ header {
 }
 
 h1 {
-  color: var(--color-naranja); /* Naranja para el encabezado */
-  font-size: 24px;
+  color: var(--color-naranja);
+  font-size: 28px;
   margin: 0;
+  text-align: center;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
 }
 
 label {
-  font-size: 14px;
-  color: var(--color-gris-pálido); /* Gris pálido para las etiquetas */
-  text-align: left;
+  font-size: 16px;
+  color: var(--color-gris-pálido);
+  margin-bottom: 5px;
 }
 
 input {
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
-  border: 1px solid var(--color-borde-campo); /* Gris pálido para el borde de los campos */
-  border-radius: 4px;
+  border: 1px solid var(--color-borde-campo);
+  border-radius: 6px;
   outline: none;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
 }
 
 input:focus {
-  border-color: var(
-    --color-naranja
-  ); /* Naranja cuando el campo está enfocado */
+  border-color: var(--color-naranja);
+  box-shadow: 0 0 5px var(--color-naranja);
 }
 
 button {
-  padding: 10px;
-  font-size: 16px;
-  background-color: var(--color-rojo-claro); /* Rojo claro para el botón */
-  color: #fff; /* Blanco para el texto del botón */
+  padding: 12px;
+  font-size: 18px;
+  background-color: var(--color-rojo-claro);
+  color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: var(
-    --color-gris-pálido
-  ); /* Gris pálido para el botón al pasar el cursor */
+  background-color: var(--color-verde-claro);
+  transform: scale(1.05);
 }
 
 #message {
   margin-top: 15px;
   font-size: 16px;
-  color: var(--color-rojo-claro); /* Rojo claro para los mensajes */
+  font-weight: bold;
+  text-align: center;
 }
