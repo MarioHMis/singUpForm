@@ -1,0 +1,141 @@
+/* Definición de variables CSS */
+:root {
+  --color-verde-pálido: #b5d5c5;
+  --color-gris-pálido: #b0b8bb;
+  --color-naranja: #eca869;
+  --color-blanco-muy-claro: #f5f5f5;
+  --color-rojo-claro: #b08bbb;
+  --color-azul-oscuro: rgba(
+    29,
+    29,
+    218,
+    0.5
+  ); /* Color con opacidad para el fondo */
+  --color-borde-campo: #b0b8bb;
+}
+
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: var(
+    --color-blanco-muy-claro
+  ); /* Color de fondo del cuerpo de la página */
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+}
+
+.left-side {
+  flex: 1;
+  background-image: url("images/DraSentada.JPG"); /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff; /* Color del texto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(
+    --color-azul-oscuro
+  ); /* Color con opacidad para que se vea la imagen de fondo */
+}
+
+.left-side .odontos {
+  width: 30%;
+  margin-top: 0;
+}
+
+.left-side h2 {
+  margin: 0;
+  font-size: 32px;
+  color: var(--color-blanco-muy-claro); /* Blanco muy claro para el texto */
+}
+
+.left-side p {
+  font-size: 18px;
+  text-align: center;
+  color: var(--color-blanco-muy-claro); /* Blanco muy claro para el texto */
+}
+
+/* Lado derecho de la página */
+
+.right-side {
+  flex: 1;
+  background-color: #ffffff; /* Blanco para el fondo del formulario */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-left: 2px solid var(--color-gris-pálido); /* Línea divisoria gris pálido */
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: var(--color-naranja); /* Naranja para el encabezado */
+  font-size: 24px;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+label {
+  font-size: 14px;
+  color: var(--color-gris-pálido); /* Gris pálido para las etiquetas */
+  text-align: left;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--color-borde-campo); /* Gris pálido para el borde de los campos */
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+input:focus {
+  border-color: var(
+    --color-naranja
+  ); /* Naranja cuando el campo está enfocado */
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: var(--color-rojo-claro); /* Rojo claro para el botón */
+  color: #fff; /* Blanco para el texto del botón */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(
+    --color-gris-pálido
+  ); /* Gris pálido para el botón al pasar el cursor */
+}
+
+#message {
+  margin-top: 15px;
+  font-size: 16px;
+  color: var(--color-rojo-claro); /* Rojo claro para los mensajes */
+}
